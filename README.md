@@ -21,3 +21,19 @@ Furthermore, please consider having a look at the following closely related work
 [GitHub repository](https://github.com/Fusion-Goettingen/FUSION_2024_Steuernagel_LidarRM)
 
 where rectangular objects are considered.
+
+## Brief repository overview:
+
+- Key scripts to run the conducted experiments can be found [here](./contour_eot/experiment_scripts)
+    - For the extended object tracking experiments,
+      [`tracking_experiment.py`](./contour_eot/experiment_scripts/tracking_experiment.py) generates all the key figures
+      used in the paper
+    - Numerical verification of the derived scaling factors is done
+      [here](./contour_eot/experiment_scripts/numerical_convergence.py)
+    - Examples for the two sampling strategies can be generated using
+      [this script](./contour_eot/experiment_scripts/exemplary_image_generation.py)
+- Implementations of the trackers can be found in [this directory](./contour_eot/methods)
+    - For the random matrix tracker, the standard version with a fix (scalar) scaling factor can be
+      found [in this file](./contour_eot/methods/random_matrix.py)
+    - The version that adaptively determines the two scaling factors for the axis extends the standard RM tracker and
+      can be found [here](./contour_eot/methods/random_matrix_equidistant_contour.py)
